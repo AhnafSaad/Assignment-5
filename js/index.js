@@ -33,9 +33,11 @@ document.getElementById('blog-btn').addEventListener('click', function () {
     window.location.href = "blog.html";
 });
 
-//  donation view and history view
+
+// Donation view and history view
 const donationButton = document.getElementById('donation-btn');
 const historyButton = document.getElementById('history-btn');
+const footerDiv = document.getElementById('footer-div');
 
 historyButton.addEventListener('click', function () {
     historyButton.classList.add('bg-primary-color');
@@ -45,7 +47,7 @@ historyButton.addEventListener('click', function () {
     
     document.getElementById('card-section').classList.add('hidden');
     document.getElementById('history-section').classList.remove('hidden');
-    document.getElementById('footer-div').classList.add('hidden');
+    footerDiv.classList.remove('hidden'); 
 });
 
 donationButton.addEventListener('click', function () {
@@ -56,8 +58,9 @@ donationButton.addEventListener('click', function () {
     
     document.getElementById('card-section').classList.remove('hidden');
     document.getElementById('history-section').classList.add('hidden');
-    document.getElementById('footer-div').classList.remove('hidden');
+    footerDiv.classList.remove('hidden'); 
 });
+
 
 //o get input value as a number
 function getInputAsNumber(id) {
