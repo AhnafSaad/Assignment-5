@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ</title>
+
+    <!-- CSS Frameworks -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS Customization -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-color": "#B4F461",
+                        "background-color": "#F9F7F3",
+                        "border-color": "#e0e0e2",
+                        "paragraph-color": "#111111B3",
+                    },
+                    fontFamily: {
+                        lexand: ['"Lexend", sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="font-lexand bg-background-color">
+    <!-- Header -->
+    <header class="sticky z-10 w-full bg-background-color pb-6 top-0 border border-transparent">
+        <!-- Navbar -->
+        <div class="navbar w-11/12 mx-auto mt-4">
+            <div class="navbar-start">
+                <a id="home-btn" class="btn bg-primary-color">Home</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <div class="flex justify-center items-center gap-2">
+                    <div>
+                        <img src="assets/logo.png" alt="site logo" class="w-3/4" />
+                    </div>
+                    <p id="site-name" class="md:text-lg">Charity Bangladesh</p>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <div class="flex justify-center items-center">
+                    <div>
+                        <img src="assets/coin.png" alt="donation image" class="w-3/4" />
+                    </div>
+                    <p id="donation-amount" class="md:text-lg">5500 BDT</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="bg-white mt-10 md:mt-16 mb-10 md:mb-20 w-11/12 mx-auto">
+        <h1 class="text-4xl font-bold text-center sm:text-left">
+            Frequently Asked Questions
+            <i class="fa-solid fa-circle-question"></i>
+        </h1>
+
+        <!-- FAQ Section -->
+        <div class="space-y-6">
+            <div class="collapse collapse-arrow bg-base-200 mt-10">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">
+                    What is the Document Object Model (DOM)?
+                </div>
+                <div class="collapse-content">
+                    <p>
+                        The DOM is a programming interface for HTML and XML documents. It represents the structure of
+                        the page, enabling programs to modify elements, styles, and content by accessing objects.
+                    </p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">
+                    How do you select an element from the DOM?
+                </div>
+                <div class="collapse-content">
+                    <p>
+                        You can select elements using methods like <code>getElementById</code>, which locates an element
+                        based on its ID. If the ID exists, it returns the element; otherwise, it returns null.
+                    </p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">
+                    What is event delegation and why is it useful?
+                </div>
+                <div class="collapse-content">
+                    <p>
+                        Event delegation is a technique where event listeners are attached to a parent element instead
+                        of individual child elements, allowing efficient handling of events for dynamic content.
+                    </p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">
+                    How can you modify an element's attributes or styles using the DOM?
+                </div>
+                <div class="collapse-content">
+                    <p>
+                        Attributes and styles can be easily changed using DOM methods like <code>setAttribute</code> or
+                        by directly manipulating the <code>style</code> property of an element object.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('home-btn').addEventListener('click', function () {
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+
+</html>
