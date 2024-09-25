@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
-    <!-- Daisy-UI -->
+
+    <!-- Daisy-UI and Tailwind CSS integration -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- font awesome -->
+    <!-- Font Awesome icons for styling -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- google fonts -->
+    <!-- Google Fonts for custom font usage -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
-    
-    <!-- tailwind  -->
+    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -40,13 +40,11 @@
     </script>
 </head>
 
-
-
-
 <body class="font-lexand m-0 p-0">
-    <!-- header con start -->
+
+    <!-- Navbar Section -->
     <header id="header" class="sticky z-10 w-full navbar-color pb-6 top-0  border border-transparent">
-        <!-- navbar -->
+        <!-- Top Navbar with logo and total amount -->
         <div class="w-full pt-4 pb-4 bg-background-color">
             <div class="navbar w-11/12 mx-auto">
                 <div class="navbar-start">
@@ -71,28 +69,29 @@
             </div>
         </div>
 
-        <!-- history btn-->
+        <!-- Buttons to toggle between Donation and History section -->
         <div class="flex justify-center items-center gap-4 mt-10">
             <button id="donation-btn" class="btn bg-primary-color">Donation</button>
             <button id="history-btn" class="btn bg-white">History</button>
         </div>
     </header>
-    <!-- header con end -->
+    <!-- End of Navbar Section -->
 
+    <!-- Separator -->
     <div class="divider"></div>
 
-    <!-- main container -->
+    <!-- Main Content -->
     <main class="bg-white mt-10 md:mt-16 mb-10 md:mb-20 w-11/12 mx-auto">
-        <!-- donation card -->
+        <!-- Donation Cards Section -->
         <section id="card-section" class="mt-8 space-y-10 md:space-y-20">
-            <!-- card 1 -->
+            <!-- Card 1: Noakhali Donation -->
             <div class="hero border border-border-color rounded-2xl overflow-hidden">
                 <div class="hero-content flex flex-col lg:flex-row w-full justify-between gap-10">
-                    <!-- img -->
+                    <!-- Image Section -->
                     <div class="card bg-base-100 w-full lg:w-1/2 shrink-0 shadow-2xl">
                         <img src="assets/noakhali.png" alt="noakhali flood image" class="w-full h-full object-cover">
                     </div>
-                    <!-- content -->
+                    <!-- Donation Information -->
                     <div class="text-center lg:text-left w-full lg:w-1/2 space-y-4">
                         <button class="btn">
                             <img src="assets/coin.png" alt="coin image">
@@ -101,7 +100,7 @@
                         <h1 id="noakhali-heading" class="title text-2xl font-bold">Donate for Flood at Noakhali,
                             Bangladesh</h1>
                         <p class="py-6">
-                            The recent floods in Noakhali have severely damaged homes and infrastructure. Your donation will provide essential supplies to those affected by this disaster. Every contribution, whether large or small, makes a difference. Join us in supporting the relief efforts and positively impacting the lives of those in need.
+                            The recent floods in Noakhali have severely damaged homes and infrastructure. Your donation will provide essential supplies to those affected by this disaster.
                         </p>
                         <input id="noakhali-donate-amount" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered input-md w-full" />
@@ -110,24 +109,25 @@
                     </div>
                 </div>
             </div>
-            <!-- card 2 -->
+            
+            <!-- Card 2: Feni Donation -->
             <div class="hero border border-border-color rounded-2xl overflow-hidden">
                 <div class="hero-content flex flex-col lg:flex-row w-full justify-between gap-10">
-                    <!-- img -->
+                    <!-- Image Section -->
                     <div class="card bg-base-100 w-full lg:w-1/2 shrink-0 shadow-2xl">
                         <img src="assets/feni.png" alt="feni flood image" class="w-full h-full object-cover">
                     </div>
-                    <!-- content part -->
+                    <!-- Donation Information -->
                     <div class="text-center lg:text-left w-full lg:w-1/2 space-y-4">
                         <button class="btn">
                             <img src="assets/coin.png" alt="coin image">
                             <p><span id="feni-amount">600</span> BDT</p>
                         </button>
                         <h1 id="feni-heading" class="title text-2xl font-bold">
-                            Donate for Flood Relief in Feni,Bangladesh
+                            Donate for Flood Relief in Feni, Bangladesh
                         </h1>
                         <p class="py-6">
-                            The recent floods in Feni have devastated local communities, causing significant disruption and loss. Your generous donation will provide immediate aid, such as food, clean water, and medical supplies, to those affected by this disaster. Together, we can offer vital support and help rebuild lives in the aftermath. Every contribution makes a real difference. Please consider donating today to help those in urgent need.
+                            The recent floods in Feni have devastated local communities. Your generous donation will provide immediate aid such as food, clean water, and medical supplies.
                         </p>
                         <input id="feni-donate-amount" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered input-md w-full" />
@@ -136,15 +136,15 @@
                     </div>
                 </div>
             </div>
-            <!-- card 3 -->
+
+            <!-- Card 3: Protest Relief Donation -->
             <div class="hero border border-border-color rounded-2xl overflow-hidden">
                 <div class="hero-content flex flex-col lg:flex-row w-full justify-between gap-10">
-                    <!-- image part -->
+                    <!-- Image Section -->
                     <div class="card bg-base-100 w-full lg:w-1/2 shrink-0 shadow-2xl">
-                        <img src="assets/quota-protest.png" alt="protest image"
-                            class="w-full h-full object-cover">
+                        <img src="assets/quota-protest.png" alt="protest image" class="w-full h-full object-cover">
                     </div>
-                    <!-- content part -->
+                    <!-- Donation Information -->
                     <div class="text-center lg:text-left w-full lg:w-1/2 space-y-4">
                         <button class="btn">
                             <img src="assets/coin.png" alt="coin image">
@@ -154,20 +154,20 @@
                             Aid for Injured in the Quota Movement
                         </h1>
                         <p class="py-6">
-                            The recent Quota movement has caused numerous injuries and significant hardship for many individuals. Your support is essential in providing medical care, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that the injured receive the care and support they need during this difficult time. Every donation plays a crucial role in easing their suffering and aiding in their recovery. Please consider donating to support these courageous individuals in their time of need.
+                            The recent Quota movement has caused numerous injuries and significant hardship. Your support will help provide medical care and necessary supplies to those affected.
                         </p>
                         <input id="protest-donate-amount" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered input-md w-full" />
                         <button id="protest-donate-btn"
                             class="btn w-full bg-primary-color text-lg font-bold mt-4">Donate Now</button>
                     </div>
-                    </div>
-                    </div>
-                    </section>
-                    
-                <!-- History  -->
-                    <section id="history-section" class="hidden mt-8 space-y-4">
-                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donation History Section -->
+        <section id="history-section" class="hidden mt-8 space-y-4">
+        </section>
                     
                     <!-- modal code -->
                     <dialog id="my_modal_1" class="modal">
@@ -190,10 +190,14 @@
                     <!-- main container end -->
                     
                     <!-- footer Section start -->
-                    <footer class="w-full h-[20vh] bg-slate-100 flex justify-center items-center text-gray-500 bottom-0">
-                    <div id="footer-div" class="bg-background-color p-10"></div>
-                    <p>"© 2024 || Created by Ahnaf Sadik Saad"</p>
-                    </footer>
+                   <!-- footer Section start -->
+<footer class="w-full bg-slate-100 flex flex-col justify-center items-center text-gray-500 p-4 md:p-10">
+    <div id="footer-div" class="bg-background-color w-full text-center p-4 md:p-10">
+        <p>"© 2024 || Created by Ahnaf Sadik Saad"</p>
+    </div>
+</footer>
+<!-- footer container ends -->
+
                     <!-- footer container ends -->
                     
                     <!-- JavaScript file -->
