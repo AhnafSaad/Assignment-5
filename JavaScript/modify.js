@@ -34,6 +34,23 @@ document.getElementById('blog-btn').addEventListener('click', function () {
 });
 
 
+
+
+
+//o get input value as a number
+function getInputAsNumber(id) {
+    const inputValue = document.getElementById(id).value;
+    const inputValueAsNumber = Number(inputValue);
+    return inputValueAsNumber;
+}
+
+// get text value as a number
+function getTextAsNumber(id) {
+    const textValue = document.getElementById(id).innerText;
+    const textValueAsNumber = Number(textValue);
+    return textValueAsNumber;
+}
+
 // Donation view and history view
 const donationButton = document.getElementById('donation-btn');
 const historyButton = document.getElementById('history-btn');
@@ -60,21 +77,6 @@ donationButton.addEventListener('click', function () {
     document.getElementById('history-section').classList.add('hidden');
     footerDiv.classList.remove('hidden'); 
 });
-
-
-//o get input value as a number
-function getInputAsNumber(id) {
-    const inputValue = document.getElementById(id).value;
-    const inputValueAsNumber = Number(inputValue);
-    return inputValueAsNumber;
-}
-
-// get text value as a number
-function getTextAsNumber(id) {
-    const textValue = document.getElementById(id).innerText;
-    const textValueAsNumber = Number(textValue);
-    return textValueAsNumber;
-}
 
 // handle donation logic for each card
 function donationHandle(buttonId, donationInputNumberId, totalDonationId, totalAmountId, historySection, titleId) {
