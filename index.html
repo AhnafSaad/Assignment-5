@@ -1,13 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 5</title>
+    <title>Donate Bangladesh</title>
+    <!-- Daisy-UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    
+    <!-- tailwind  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-color': '#B4F461',
+                        'background-color': '#F9F7F3',
+                        'border-color': '#e0e0e2',
+                        'paragraph-color': '#111111B3',
+                    },
+                    fontFamily: {
+                        'lexand': ['"Lexend", sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <nav>
-        
-    </nav>
-</body>
-</html>
+
+
+
+
+<body class="font-lexand m-0 p-0">
+    <!-- header con start -->
+    <header id="header" class="sticky z-10 w-full navbar-color pb-6 top-0  border border-transparent">
+        <!-- navbar -->
+        <div class="w-full pt-4 pb-4 bg-background-color">
+            <div class="navbar w-11/12 mx-auto">
+                <div class="navbar-start">
+                    <a id="blog-btn" class="btn bg-primary-color">Blog</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <div class="flex justify-center items-center gap-2">
+                        <div>
+                            <img src="assets/logo.png" alt="coin logo" class="w-3/4">
+                        </div>
+                        <p class="md:text-lg">Donate Bangladesh</p>
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <div class="flex justify-center items-center">
+                        <div>
+                            <img src="assets/coin.png" alt="coin image" class="w-3/4">
+                        </div>
+                        <p class="md:text-lg"><span id="total-amount">5500</span> BDT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- history btn-->
+        <div class="flex justify-center items-center gap-4 mt-10">
+            <button id="donation-btn" class="btn bg-primary-color">Donation</button>
+            <button id="history-btn" class="btn bg-white">History</button>
+        </div>
+    </header>
+    <!-- header con end -->
+
+    <div class="divider"></div>
+
+    <!-- main container -->
+    <main class="bg-white mt-10 md:mt-16 mb-10 md:mb-20 w-11/12 mx-auto">
+        <!-- donation card -->
+        <section id="card-section" class="mt-8 space-y-10 md:space-y-20">
+            <!-- card 1 -->
+            <div class="hero border border-border-color rounded-2xl overflow-hidden">
+                <div class="hero-content flex flex-col lg:flex-row w-full justify-between gap-10">
+                    <!-- img -->
+                    <div class="card bg-base-100 w-full lg:w-1/2 shrink-0 shadow-2xl">
+                        <img src="assets/noakhali.png" alt="noakhali flood image" class="w-full h-full object-cover">
+                    </div>
+                    <!-- content -->
+                    <div class="text-center lg:text-left w-full lg:w-1/2 space-y-4">
+                        <button class="btn">
+                            <img src="assets/coin.png" alt="coin image">
+                            <p><span id="noakhali-amount">0</span> BDT</p>
+                        </button>
+                        <h1 id="noakhali-heading" class="title text-2xl font-bold">Donate for Flood at Noakhali,
+                            Bangladesh</h1>
+                        <p class="py-6">
+                            The recent floods in Noakhali have severely damaged homes and infrastructure. Your donation will provide essential supplies to those affected by this disaster. Every contribution, whether large or small, makes a difference. Join us in supporting the relief efforts and positively impacting the lives of those in need.
+                        </p>
+                        <input id="noakhali-donate-amount" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered input-md w-full" />
+                        <button id="noakhali-donate-btn"
+                            class="btn w-full bg-primary-color text-lg font-bold mt-4">Donate Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- card 2 -->
+            <div class="hero border border-border-color rounded-2xl overflow-hidden">
+                <div class="hero-content flex flex-col lg:flex-row w-full justify-between gap-10">
+                    <!-- img -->
+                    <div class="card bg-base-100 w-full lg:w-1/2 shrink-0 shadow-2xl">
+                        <img src="assets/feni.png" alt="feni flood image" class="w-full h-full object-cover">
+                    </div>
+                    <!-- content part -->
+                    <div class="text-center lg:text-left w-full lg:w-1/2 space-y-4">
+                        <button class="btn">
+                            <img src="assets/coin.png" alt="coin image">
+                            <p><span id="feni-amount">600</span> BDT</p>
+                        </button>
+                        <h1 id="feni-heading" class="title text-2xl font-bold">
+                            Donate for Flood Relief in Feni,Bangladesh
+                        </h1>
+                        <p class="py-6">
+                            The recent floods in Feni have devastated local communities, causing significant disruption and loss. Your generous donation will provide immediate aid, such as food, clean water, and medical supplies, to those affected by this disaster. Together, we can offer vital support and help rebuild lives in the aftermath. Every contribution makes a real difference. Please consider donating today to help those in urgent need.
+                        </p>
+                        <input id="feni-donate-amount" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered input-md w-full" />
+                        <button id="feni-donate-btn" class="btn w-full bg-primary-color text-lg font-bold mt-4">Donate
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- card 3 -->
+            <div class="hero border border-border-color rounded-2xl overflow-hidden">
+                <div class="hero-content flex flex-col lg:flex-row w-full justify-between gap-10">
+                    <!-- image part -->
+                    <div class="card bg-base-100 w-full lg:w-1/2 shrink-0 shadow-2xl">
+                        <img src="assets/quota-protest.png" alt="protest image"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- content part -->
+                  
